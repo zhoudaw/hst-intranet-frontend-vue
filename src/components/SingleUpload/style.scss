@@ -1,0 +1,67 @@
+@mixin transition {
+  transition: 0.3s ease all;
+}
+
+@mixin text-grey {
+  color: #8492a6;
+
+  &.has-hover {
+    &:hover {
+      color: #263240;
+    }
+  }
+}
+
+.single-upload-wrap {
+  border: 1px solid #e9edf2;
+  border-radius: 4px;
+  @include transition();
+
+  &:hover {
+    border-color: #1875f0;
+    @include transition();
+  }
+
+  .el-upload {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    .upload-img-box {
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      border: 1px dotted #e9edf2;
+      margin-right: 10px;
+      font-size: 30px;
+      @include text-grey;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .upload-desc-box {
+      flex: 1;
+      line-height: normal;
+      text-align: left;
+      display: flex;
+
+      .el-upload__text {
+        color: #bdc5d0;
+        font-size: 12px;
+      }
+
+      .opt-box {
+        .el-button--text {
+          color: #8492a6;
+          font-size: 14px;
+
+          &:hover {
+            color: #1875f0;
+          }
+        }
+      }
+    }
+  }
+}

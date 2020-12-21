@@ -1,0 +1,24 @@
+{{#if template}}
+<template>
+  <div>
+    <el-card>{{ properCase name }}</el-card>
+  </div>
+</template>
+{{/if}}
+
+{{#if script}}
+<script>
+export default {
+  name: "{{ properCase name }}",
+  data() {
+    return {};
+  },
+  mounted() {},
+  methods: {}
+};
+</script>
+{{/if}}
+
+{{#if style}}
+<style lang="scss" scoped></style>
+{{/if}}

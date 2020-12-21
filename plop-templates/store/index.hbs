@@ -1,0 +1,31 @@
+{{#if api}}
+import api from "@/api/{{name}}";
+{{/if}}
+
+{{#if state}}
+const state = {};
+{{/if}}
+
+{{#if getters}}
+const getters = {};
+Object.keys(state).forEach(key => {
+  getters[key] = state => state[key];
+});
+{{/if}}
+
+{{#if actions}}
+const actions = {};
+{{/if}}
+
+{{#if mutations}}
+const mutations = {
+  SET_STATE(state, payload) {
+    state[payload.target] = payload.data;
+  }
+};
+{{/if}}
+
+export default {
+  namespaced: true,
+  {{options}}
+};

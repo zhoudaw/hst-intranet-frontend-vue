@@ -1,0 +1,9 @@
+export { default as SenderInfo } from "./SenderInfo";
+export { default as ReceiverInfo } from "./ReceiverInfo";
+export { default as BoxItem } from "./BoxItem";
+export { default as SendAndReceiveInfo } from "./SendAndReceiveInfo";
+export { default as NumberInfo } from "./NumberInfo";
+export { default as OtherInfo } from "./OtherInfo";
+export { default as CustomsClearanceInfo } from "./CustomsClearanceInfo";
+export { default as ShipperInfo } from "./ShipperInfo";
+export { default as FreightInsuranceMiscellaneousInfo } from "./FreightInsuranceMiscellaneousInfo";
